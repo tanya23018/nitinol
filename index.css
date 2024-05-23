@@ -1,0 +1,257 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing:border-box;
+    font-family: 'Playfair Display';
+    /* background-color: #210235; */
+}
+
+.nav-bar {
+    
+    background-color:white;
+    color:white;
+    font-family: 'Playfair Display';
+    font-size:18px;
+    height:70px;
+    display:flex;
+    align-items:center;
+    justify-content:flex-start;
+}
+
+.nav-bar .logo {
+    margin-left:2%;
+}
+
+.nav-bar .logo ul {
+    background-color:none;
+}
+.nav-bar #left li {
+    display: inline-block;
+    list-style-type: none;
+    margin-left:30px;
+}
+.nav-bar #right {
+    
+    margin-left:750PX;
+    margin-right: 3%;
+}
+.nav-bar #right li {
+
+    display: inline-block;
+    list-style-type: none;
+    margin-left:50px;
+}
+
+
+
+.nav-bar ul li a {
+    font-size: 1.2em;
+    color:rgb(0, 0, 0);
+    text-decoration: none;
+
+}
+
+/* Information */
+.content{
+    height:700px;
+    /* background-image: linear-gradient(white,rgb(189, 207, 242),rgb(116, 160, 249)); */
+    background-image: url("/images/clayton-cardinalli-hkJNx0EDbjE-unsplash.jpg");
+    background-color: #8E3E63;
+    background-size: cover;
+}
+.content video{
+    height: 100%;
+    width: 100%;
+}
+.div-info{
+    display: inline-block;
+    height:80%;
+    width:40%;
+    background-color: rgba(255, 255, 255, 0.699);
+    box-shadow:5px 5px 8px rgb(69, 69, 69);
+    margin-left: 5%;
+    margin-top: 3%;
+    display:flex;
+    float: left;
+    border-radius: 5%;
+    align-items:flex-start;
+    transition: 1s;
+    justify-content: center;
+    padding:60px;
+}
+.div-image{
+    display: inline-block;
+    border-radius: 5%;
+    box-shadow:5px 5px 8px rgb(69, 69, 69);
+    height:80%;
+    width:40%;
+    background-color: rgba(255, 255, 255, 0.699);
+    margin-left:10%;
+    margin-top: 3%;  
+    display:flex;
+    float: left;
+    transition: 1s;
+    align-items:flex-start;
+    /* justify-content: center; */
+    padding:30px;  
+}
+
+.content div:hover{
+    transform: scale(1.1);
+}
+.div-image img{
+    margin-top:10px;
+    margin-left: 30px;
+    display: inline-block;
+}
+
+.content-two{
+    height:700px;
+    /* background-color: rgb(245, 249, 253); */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+#highlights{    
+    background-image: linear-gradient(to right, rgb(18, 2, 160),blue);
+    -webkit-background-clip: text;
+    color:transparent;
+    /* color:blue; */
+    font-size: 2.5em;
+    margin-top:20px;
+    /* margin-left:45%; */
+}
+
+footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #e6efff;
+
+}
+footer ul{
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    justify-content: center;
+    padding:10px;
+    /* flex-direction: column; */
+}
+footer ul li{
+    text-decoration: none;
+    margin-left:20px;
+    /* flex-direction: column; */
+}
+/* cards */
+
+.scroll-main{
+    height:400px;
+    width: 77%;
+    background-color: #91a6ce;
+    margin-top: 3%;
+    padding:40px;
+    display:flex;
+    overflow-x: hidden;
+    
+}
+/* .scroll-main ::-webkit-scrollbar{
+    display:none;
+} */
+.cards{
+    height:300px;
+    width:300px;
+    background-color: white;
+    margin-right:30px;
+    display:grid;
+    flex:none;
+    grid-template-columns: auto auto auto;
+    grid-gap:20px;
+    padding: 20px;
+    transition:1s ;
+    border-radius: 5%;
+    box-shadow:5px 5px 8px rgb(104, 104, 104);
+    
+
+}
+/* buttons */
+#btn1{
+    position: absolute;
+    left:30px;
+    top:1050px;
+    cursor:pointer;
+}
+#btn2{
+    position: absolute;
+    right:30px;
+    cursor:pointer;
+    top:1050px;
+}
+.view-more{
+    height:30px;
+    width:30px;
+    color:white;
+    font-weight: 600;
+    font-size:20px;
+    background-color: rgba(0, 46, 130, 0.716);
+    border:none;
+
+}
+.view-more:hover{
+    cursor:pointer;
+}
+.scroll-main .cards:hover{
+    transform: scale(1.1);
+}
+
+/* popup cards */
+.popup .overlay{
+    position: fixed;
+    top: 0px;
+    left:0px;
+    width:100vw;
+    height:100vh;
+    background:rgba(0,0,0,0.7);
+    z-index:1;
+    display: none;
+}
+
+.popup .cont-inside{
+    position: absolute;
+    top:180%;
+    left:50%;
+    transform:translate(-50%,-50%) scale(0);
+    background-color: rgb(239, 254, 255);
+    width:450px;
+    height:300px;
+    z-index:2;
+    text-align:center;
+    padding:20px;
+    box-sizing:border-box;
+
+}
+
+.popup #closebtn{
+    height:30px;
+    width:30px;
+    border-radius: 50%;
+    color:white;
+    font-weight: 600;
+    font-size:20px;
+    background-color: rgba(233, 59, 91, 0.761);
+    border:none;
+    position:absolute;
+    right:20px;
+    top:20px;
+    cursor:pointer;
+}
+
+.popup.active .overlay{
+    display:block;
+}
+
+.popup.active .cont-inside{
+    transition: all 0.5s ease-in-out;
+    transform: translate(-50%,-50%) scale(1);
+}

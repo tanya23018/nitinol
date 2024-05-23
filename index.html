@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rajnish Goyal</title>
+    <link rel="stylesheet" href="/css/index.css">
+    <script src="https://kit.fontawesome.com/b29b05d195.js" crossorigin="anonymous"></script>
+    <link href='https://fonts.googleapis.com/css?family=Playfair Display' rel='stylesheet'>
+</head>
+<body>
+    <!-- navigation bar -->
+    <header>
+        <nav class="nav-bar">
+            <div class="logo"><a href="#"><img src="/images/rg.png" height="80px;"></a></div>
+            <ul id="left">
+                <li><a href="#"><b>Home</b></a></li>
+                <li><a href="#"><b>About</b></a></li>
+            </ul>
+            <ul id="right">
+                <li><a href="#"><b>Contact</b></a></li>
+            </ul>
+            <img src="/images/settings.png" height="80">
+        </nav>
+    </header>
+    
+
+    <!-- Information -->
+    <div class="content">
+        <div class="div-info">
+            <!-- Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem enim praesentium ipsum quo et obcaecati assumenda cumque doloribus unde alias possimus quibusdam reiciendis hic exercitationem, quia consequuntur maxime ad sint voluptates est itaque iiet libero consequatur. A voluptatum numquam quos, unde, dolorum reiciendis fuga aliquam aperiam iusto, veritatis labore! Corporis, sequi ullam voluptatem accusantium, numquam quia incidunt a ut, molestias beatae quis enim? -->
+        </div>
+        <div class="div-image">
+            <!-- <img src="/images/engineer-removebg-preview.png"> -->
+        </div>
+    </div>
+    <div class="content-two">
+        <!-- highlights -->
+        <h1 id="highlights"><B>H I G H L I G H T S</B></h1>
+        <img src="/images/left.png" id="btn1" height="150">
+        <img src="/images/right.png" id="btn2" height="150">
+        <div class="scroll-main">
+            <div class="cards">
+                <button id="plus1" class = "view-more" onclick="showPopUp()" height="100">&plus;</button>
+            </div>
+
+            <div class="cards">
+                <button id="plus1" class = "view-more" onclick="showPopUp()" height="100">&plus;</button>
+            </div>
+
+            <div class="cards">
+            <button id="plus1" class = "view-more" onclick="showPopUp()" height="100">&plus;</button>
+            </div>
+
+            <div class="cards">
+            <button id="plus1" class = "view-more" onclick="showPopUp()" height="100">&plus;</button>
+            </div>
+
+            <div class="cards">
+            <button id="plus1" class = "view-more" onclick="showPopUp()" height="100">&plus;</button>
+            </div>
+
+        </div>
+</div>
+
+<!-- modal effect on clicking read more -->
+<div class="popup" id="popup1">
+    <div class="overlay"></div>
+    <div class="cont-inside">
+        <button id="closebtn" onclick="closePopUp()">&times;</button>
+        <br>
+        <h1>Title</h1>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus fugiat blanditiis, corporis tenetur vel in corrupti inventore ipsa provident quas culpa quasi velit, rem laborum ab enim tempora consequatur. Culpa possimus deserunt, architecto corporis saepe ab rem eos doloremque officia soluta? Itaque libero totam at ipsum blanditiis modi officiis nobis!</p>
+    </div>   
+</div>
+
+
+<!-- footer -->
+<footer>
+    <ul id="socials">
+        <li><a href=""><i class="fa-brands fa-linkedin fa-2xl" style="color: #002699;"></i></a></li>
+        <li><a href=""></i><i class="fa-brands fa-youtube fa-2xl" style="color: #f00000;"></i></a></li>
+        <li><a href=""><i class="fa-brands fa-github fa-2xl" style="color: #020203;"></i></a></li> 
+    </ul>
+    &copy;Rajnish Goyal
+</footer>
+
+<!-- javascript -->
+
+<script>
+    let scrollCont = document.querySelector(".scroll-main");
+    let back = document.getElementById("btn1");
+    let front = document.getElementById("btn2");
+
+front.addEventListener("click", () => {
+    scrollCont.style.scrollBehavior = "smooth";
+    scrollCont.scrollLeft += 500;  // Move content to the right
+});
+
+back.addEventListener("click", () => {
+    scrollCont.style.scrollBehavior = "smooth";
+    scrollCont.scrollLeft -= 500;  // Move content to the left
+});
+
+
+// modal effect
+
+function showPopUp(){
+    document.getElementById("popup1").style.display='block';
+    document.getElementById("popup1").classList.toggle("active");
+    
+}
+function closePopUp(){
+    document.getElementById("popup1").style.display='none';
+}
+</script>
+</body>
+
+</html>
